@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>aeroplane</title>
+		<style>
+			body{
+				margin: 0;
+				padding: 0;
+			}
+			#plane {
+				animation: move 10s linear;
+				width: 100px;
+				height: 500px;
+			}
+			#entity {
+				animation: falling 5s ease-in alternate 2;
+				width: 50px;
+				height: 50px;
+			}
+			@keyframes move {
+				from {transform: translateX(0px)}
+				to {transform: translateX(1000px)}
+			}
+			@keyframes falling {
+				from {transform: translateY(0px)}
+				to {transform: translateY(500px)}
+			}
+		</style>
+
+	</head>
+	<body>
+		<div id="plane">
+			<div id="entity"><img src="plane.png" width="50" /></div>
+		</div>
+	</body>
+</html>

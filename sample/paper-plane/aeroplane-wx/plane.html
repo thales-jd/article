@@ -1,0 +1,29 @@
+<html>
+	<head>
+    <title>aeroplane</title>
+    <script src="event-dispatcher.js"></script>
+    <script src="tween.js"></script>
+		<script src="game.class.js"></script>
+		<script>
+window.addEventListener("load", init);
+function init(){
+  let bezier = [{x:0, y:0},{x:240, y:0},{x:0, y:240},{x:200, y:200}];
+  //let bezier = [{x:0, y:200},{x:100, y:0},{x:200, y:200}];
+  let plane = {
+    url:"./plane.png",
+    width: 80,
+    height: 77.6
+  }
+  var c = document.getElementById("game");
+  var context = c.getContext("2d");
+  var game = new Game.main(context);//构造game类
+  game.setPlane(plane);
+  game.debug(true);//是否调试
+  game.launch(bezier);//启动
+}
+		</script>
+	</head>
+	<body>
+		<canvas id="game" width="500" height="500"></canvas>
+	</body>
+</html>
